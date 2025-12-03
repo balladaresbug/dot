@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dot"
+version = "1.6.1"
+description = "Keyed ARX-based block cipher with custom modes for Python"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT License" }
+
+authors = [
+    { name = "92rvf8tm6y-crypto", email = "92rvf8tm6ycrypto@gmail.com" }
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Security :: Cryptography",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: Python :: 3 Only"
+]
+
+[project.urls]
+Homepage = "https://github.com/92rvf8tm6y"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["dot"]
