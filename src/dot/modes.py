@@ -161,7 +161,9 @@ class DotModeOfOperationGCM(CipherMode):
 
     def _ctr(self, nonce, data):
         out = bytearray()
-        ctr = 1
+        # Start the counter at 2 per GCM spec to avoid reusing the block that
+        # is reserved for authentication tag masking (J0).
+        ctr = 2
         pos = 0
         while pos < len(data):
             block = nonce + struct.pack(">I", ctr)
